@@ -7,9 +7,33 @@
 </head>
 <body>
 
+    <h1>Rock Paper Scissors</h1>
 
+   
+        <button onclick="console.log(playRound('rock', getComputerChoice()))">Rock</button>
+        <button onclick="console.log(playRound('paper', getComputerChoice()))">Paper</button>
+        <button onclick="console.log(playRound('scissors', getComputerChoice()))">Scissors</button>
+        <button id="btn">Rockz</button>
+        
+            <div id="container" ></div>
+                
+            </div>
+
+        
+
+        
+</body>
 
 <script>
+
+    const container = document.querySelector('#container');
+const content = document.createElement('div');
+
+
+const container2 = document.querySelector('#container');
+const content2 = document.createElement('div');
+
+
 
 let arr = ["rock", "paper", "scissors"];
 
@@ -24,20 +48,56 @@ function getComputerChoice() {
 }
 
 
+// function rockButton() {
+  
+//     return 'rock';
+//     // playRound();
+// }
+// function paperButton() {
+//     return 'paper';
+// }
+// function scissorButton() {
+//     return 'scissors';
+// }
 
 
+// btn.addEventListener('click', function (e) {
+//   console.log(e.target);
+// });
+// btn.addEventListener('click', function (e) {
+//   console.log(e.target);
+// });
 
-function playRound() {
+// const buttons = document.querySelectorAll('button');
+// buttons.forEach((button) => {
+//     button.addEventListener('click', rockButton => {
+//         alert(1);
+//     });
+//     button.addEventListener('click', rockButton => {
+//         alert(2);
+// });
+// });
 
-    let playerInput = prompt("Enter rock, paper or scissors");
-let playerSelection = playerInput.toLowerCase();
-let computerSelection = getComputerChoice();
+function playRound(playerSelection, computerSelection) {
+// const rock = document.querySelector('#rockButton');
+// rockButton.onclick = () => playerInput = 'rock';
+
+// let playerInput = 'rock';   
+// let playerSelection = playerInput.toLowerCase();
+// let computerSelection = getComputerChoice();
     
-    console.log(playerSelection);
-    console.log(computerSelection);
+content.classList.add('content');
+content.textContent = 'User : ' + playerSelection;
+container.appendChild(content);
+    
+content.classList.add('content');
+content2.textContent = 'Computer : ' + computerSelection;
+container2.appendChild(content2);
+// console.log();
     
 
     if (playerSelection == computerSelection) {
+        
         return ("play again");
 
     } else if(playerSelection == 'rock') {
@@ -81,19 +141,21 @@ let computerSelection = getComputerChoice();
 
 
 function game() {
-   
-
-    
-    console.log(playRound())
-    console.log(playRound())
+//    console.log(playRound())
+//    console.log
+    }
 
 
-}
+    // btn.addEventListener('click', alertFunction);
+// const btn = document.querySelector('#button');
+// btn.addEventListener('click', game())
+// const container = document.querySelector('#container');
+// const content = document.createElement('div');
+// content.classList.add('content');
 
-
-game()
-
-        
+const btn = document.querySelector('#btn');
+btn.onclick = () => (playRound('rock', getComputerChoice()));
+    // container.appendChild(content);
 
 
 
@@ -103,5 +165,5 @@ game()
     </script>
     
     
-</body>
+
 </html>
