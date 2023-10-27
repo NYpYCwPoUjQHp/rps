@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<script>
+
+let arr = ["rock", "paper", "scissors"];
+
+function random(mn, mx) {
+    return Math.random() * (mx - mn) + mn;
+}
+
+
+function getComputerChoice() {
+    return (arr [Math.floor(random(1, 4)) - 1]);
+
+}
+
+
+
+
+
+function playRound() {
+
+    let playerInput = prompt("Enter rock, paper or scissors");
+let playerSelection = playerInput.toLowerCase();
+let computerSelection = getComputerChoice();
+    
+    console.log(playerSelection);
+    console.log(computerSelection);
+    
+
+    if (playerSelection == computerSelection) {
+        return ("play again");
+
+    } else if(playerSelection == 'rock') {
+        if (computerSelection == 'scissors'){
+            
+            return ("you win");
+            exit;
+
+        } else {
+            
+            return ("you lose");
+            exit;
+    
+    } } else if (playerSelection == 'paper') {
+        if (computerSelection == 'rock') {    
+            return ("you win");
+            exit;
+        } else {
+            return ("you lose");
+            exit;
+           
+
+    } } else if (playerSelection == 'scissors') {
+        if (computerSelection == 'paper') {
+            return ("you win");
+            exit;
+        } else {
+            return ("you lose")
+            exit;
+            }
+            }
+        }
+
+        
+
+
+
+
+
+
+
+
+function game() {
+   
+
+    
+    console.log(playRound())
+    console.log(playRound())
+
+
+}
+
+
+game()
+
+        
+
+
+
+// }
+
+
+    </script>
+    
+    
+</body>
+</html>
